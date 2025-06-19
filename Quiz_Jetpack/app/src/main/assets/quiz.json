@@ -1,0 +1,59 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "Món ăn nào là đặc sản của Huế?",
+        "options": [
+          "Bún bò",
+          "Phở",
+          "Bánh cuốn",
+          "Bánh xèo"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": 2,
+        "question": "Sushi là món ăn truyền thống của nước nào?",
+        "options": [
+          "Trung Quốc",
+          "Nhật Bản",
+          "Hàn Quốc",
+          "Thái Lan"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 3,
+        "question": "Pizza có nguồn gốc từ quốc gia nào?",
+        "options": [
+          "Pháp",
+          "Ý",
+          "Mỹ",
+          "Tây Ban Nha"
+        ],
+        "correctAnswer": 1
+      },
+      {
+        "id": 4,
+        "question": "Nguyên liệu chính của món Tteokbokki là gì?",
+        "options": [
+          "Bánh gạo",
+          "Bánh mì",
+          "Bánh đa",
+          "Bánh tráng"
+        ],
+        "correctAnswer": 0
+      },
+      {
+        "id": 5,
+        "question": "Món ăn nào sau đây là món tráng miệng?",
+        "options": [
+          "Bánh flan",
+          "Bún chả",
+          "Cơm tấm",
+          "Bánh mì"
+        ],
+        "correctAnswer": 0
+      }
+    ]
+  }
