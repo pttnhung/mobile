@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
             case "5":
             case "6":
             case "7":
+            case "8":
             case "9":
                 screenmodel.addString(btText);
                 break;
@@ -77,10 +78,6 @@ public class MainActivity extends AppCompatActivity {
                     dot = false;
                 }
                 screenmodel.removeLast();
-                break;
-            case "C":
-                screenmodel.clear();
-                historymodel.clearHistory();
                 break;
             case "=":
                 if (last == '+' || last == '-' || last == '*' || last == '/'){
@@ -101,6 +98,12 @@ public class MainActivity extends AppCompatActivity {
                 }else {
                     calculatorWarning("Đã tồn tại dấu thập phân");
                 }
+                break;
+            case "c":
+                screenmodel.clear();
+                historymodel.clearHistory();
+                dot = false;
+                break;
         }
     }
     private void calculatorWarning (String s){
