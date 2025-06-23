@@ -2,4 +2,21 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    
+    <!-- Màu nước chủ đạo -->
+    <color name="water_primary">#2196F3</color>
+    <color name="water_primary_dark">#1976D2</color>
+    <color name="water_primary_light">#BBDEFB</color>
+    <color name="water_accent">#03DAC5</color>
+    <color name="water_accent_dark">#018786</color>
+    
+    <!-- Màu nền và text -->
+    <color name="background_light">#F3F8FF</color>
+    <color name="surface_light">#FFFFFF</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    
+    <!-- Màu cho theme tối -->
+    <color name="surface_dark">#FF121212</color>
+    <color name="text_secondary_dark">#B3FFFFFF</color>
 </resources>

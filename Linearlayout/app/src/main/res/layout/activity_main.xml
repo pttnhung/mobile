@@ -7,6 +7,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/background_light"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -15,18 +17,24 @@
         android:layout_height="wrap_content"
         android:text="Two Numbers"
         android:textSize="30sp"
+        android:textColor="@color/water_primary_dark"
         android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:textStyle="bold"
         />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="a:"
+            android:textColor="@color/water_primary"
+            android:textSize="16sp"
             android:layout_margin="8dp"
             />
 
@@ -34,17 +42,27 @@
             android:id="@+id/editTextA"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/surface_light"
+            android:padding="12dp"
+            android:textColor="@color/text_primary"
+            android:hint="Enter first number"
+            android:textColorHint="@color/text_secondary"
+            android:inputType="numberDecimal"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
     </LinearLayout>
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="b:"
+            android:textColor="@color/water_primary"
+            android:textSize="16sp"
             android:layout_margin="8dp"
             />
 
@@ -52,18 +70,29 @@
             android:id="@+id/editTextB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/surface_light"
+            android:padding="12dp"
+            android:textColor="@color/text_primary"
+            android:hint="Enter second number"
+            android:textColorHint="@color/text_secondary"
+            android:inputType="numberDecimal"
             tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
     </LinearLayout>
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
         <Button
             android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="+"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/water_primary"
             android:layout_margin="5dp"
             />
         <Button
@@ -71,6 +100,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="-"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/water_primary"
             android:layout_margin="5dp"
             />
         <Button
@@ -78,6 +110,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="*"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/water_primary"
             android:layout_margin="5dp"
             />
         <Button
@@ -85,12 +120,52 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="/"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/water_primary"
             android:layout_margin="5dp"
             />
     </LinearLayout>
+    
+    <!-- Nút Clear -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/water_accent"
+            android:layout_margin="5dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            />
+    </LinearLayout>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="History:"
+        android:textColor="@color/water_primary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        />
+    
     <ListView
         android:id="@+id/listViewHistory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-    />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/surface_light"
+        android:divider="@color/water_primary_light"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        />
 </LinearLayout>

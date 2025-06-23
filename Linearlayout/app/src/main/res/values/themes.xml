@@ -2,7 +2,18 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Linearlayout" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/water_primary</item>
+        <item name="colorPrimaryDark">@color/water_primary_dark</item>
+        <item name="colorPrimaryVariant">@color/water_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/water_accent</item>
+        <item name="colorSecondaryVariant">@color/water_accent_dark</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="android:colorBackground">@color/background_light</item>
+        <item name="colorSurface">@color/surface_light</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
     </style>
 
     <style name="Theme.Linearlayout" parent="Base.Theme.Linearlayout" />
