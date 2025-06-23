@@ -1,59 +1,114 @@
 {
-    "questions": [
-      {
-        "id": 1,
-        "question": "Món ăn nào là đặc sản của Huế?",
-        "options": [
-          "Bún bò",
-          "Phở",
-          "Bánh cuốn",
-          "Bánh xèo"
-        ],
-        "correctAnswer": 0
-      },
-      {
-        "id": 2,
-        "question": "Sushi là món ăn truyền thống của nước nào?",
-        "options": [
-          "Trung Quốc",
-          "Nhật Bản",
-          "Hàn Quốc",
-          "Thái Lan"
-        ],
-        "correctAnswer": 1
-      },
-      {
-        "id": 3,
-        "question": "Pizza có nguồn gốc từ quốc gia nào?",
-        "options": [
-          "Pháp",
-          "Ý",
-          "Mỹ",
-          "Tây Ban Nha"
-        ],
-        "correctAnswer": 1
-      },
-      {
-        "id": 4,
-        "question": "Nguyên liệu chính của món Tteokbokki là gì?",
-        "options": [
-          "Bánh gạo",
-          "Bánh mì",
-          "Bánh đa",
-          "Bánh tráng"
-        ],
-        "correctAnswer": 0
-      },
-      {
-        "id": 5,
-        "question": "Món ăn nào sau đây là món tráng miệng?",
-        "options": [
-          "Bánh flan",
-          "Bún chả",
-          "Cơm tấm",
-          "Bánh mì"
-        ],
-        "correctAnswer": 0
-      }
-    ]
-  }
+  "questions": [
+    {
+      "id": 1,
+      "question": "Jetpack Compose là gì?",
+      "options": [
+        "Một thư viện UI toolkit mới cho Android",
+        "Một framework backend cho Android",
+        "Một công cụ debug cho Android",
+        "Một thư viện xử lý database"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 2,
+      "question": "Hilt là gì trong Android?",
+      "options": [
+        "Một thư viện UI",
+        "Một dependency injection framework",
+        "Một database ORM",
+        "Một thư viện networking"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 3,
+      "question": "Retrofit được sử dụng để làm gì?",
+      "options": [
+        "Xử lý database",
+        "Tạo giao diện người dùng",
+        "Thực hiện các HTTP requests",
+        "Quản lý state của ứng dụng"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 4,
+      "question": "ViewModel trong Android được sử dụng để?",
+      "options": [
+        "Tạo giao diện người dùng",
+        "Lưu trữ dữ liệu",
+        "Quản lý UI state và business logic",
+        "Xử lý các HTTP requests"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 5,
+      "question": "StateFlow trong Kotlin là gì?",
+      "options": [
+        "Một loại database",
+        "Một UI component",
+        "Một reactive stream holder",
+        "Một networking library"
+      ],
+      "correctAnswer": 2
+    },
+    {
+      "id": 6,
+      "question": "Coroutine trong Kotlin được sử dụng để?",
+      "options": [
+        "Tạo giao diện người dùng",
+        "Xử lý bất đồng bộ",
+        "Lưu trữ dữ liệu",
+        "Tạo animations"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 7,
+      "question": "Material3 là gì?",
+      "options": [
+        "Một database framework",
+        "Một design system",
+        "Một networking library",
+        "Một testing framework"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 8,
+      "question": "Repository pattern trong Android được sử dụng để?",
+      "options": [
+        "Tạo giao diện người dùng",
+        "Quản lý dữ liệu và business logic",
+        "Xử lý animations",
+        "Tạo notifications"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "id": 9,
+      "question": "Dependency Injection (DI) là gì?",
+      "options": [
+        "Một design pattern để quản lý dependencies",
+        "Một UI framework",
+        "Một database system",
+        "Một testing tool"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "id": 10,
+      "question": "Clean Architecture trong Android là gì?",
+      "options": [
+        "Một UI design pattern",
+        "Một cách tổ chức code theo layers",
+        "Một database architecture",
+        "Một testing methodology"
+      ],
+      "correctAnswer": 1
+    }
+  ]
+} 

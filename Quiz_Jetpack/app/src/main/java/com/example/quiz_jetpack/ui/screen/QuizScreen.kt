@@ -15,6 +15,40 @@ import androidx.compose.foundation.clickable
 
 
 @Composable
+fun QuizScreen(
+    viewModel: QuizViewModel = viewModel()
+) {
+    val questions by viewModel.questions.collectAsState()
+    val quizState by viewModel.quizState.collectAsState()
+
+    val currentQuestion = questions.getOrNull(quizState.currentQuestionIndex)
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        if (quizState.isQuizFinished) {
+            QuizResult(
+                score = quizState.score,
+                totalQuestions = questions.size,
+                onPlayAgain = viewModel::resetQuiz
+            )
+        } else if (currentQuestion != null) {
+            QuizQuestion(
+                question = currentQuestion,
+                quizState = quizState,
+                onAnswerSelected = viewModel::selectAnswer,
+                onNextQuestion = viewModel::moveToNextQuestion
+            )
+        } else {
+            CircularProgressIndicator()
+        }
+    }
+}
+
+@Composable
 fun QuizQuestion(
     question: Quiz,
     quizState: QuizState,
@@ -22,54 +56,54 @@ fun QuizQuestion(
     onNextQuestion: () -> Unit
 ) {
     Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 8.dp),
+        modifier = Modifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Câu ${quizState.currentQuestionIndex + 1}/5",
+            text = "Câu ${quizState.currentQuestionIndex + 1}",
             style = MaterialTheme.typography.titleMedium,
-            modifier = Modifier.padding(bottom = 12.dp)
+            modifier = Modifier.padding(bottom = 8.dp)
         )
 
         Text(
             text = question.question,
-            style = MaterialTheme.typography.headlineSmall,
+            style = MaterialTheme.typography.titleLarge,
             textAlign = TextAlign.Center,
-            modifier = Modifier
-                .padding(bottom = 32.dp)
-                .fillMaxWidth()
+            modifier = Modifier.padding(bottom = 24.dp)
         )
 
+        Spacer(modifier = Modifier.height(8.dp))
+
         question.options.forEachIndexed { index, option ->
+            var isHovered by remember { mutableStateOf(false) }
             val isSelected = quizState.selectedAnswer == index
             val isCorrect = index == question.correctAnswer
             val showResult = quizState.isAnswerSelected
 
             val backgroundColor = when {
-                showResult && isCorrect -> androidx.compose.ui.graphics.Color(0xFF4CAF50) // Xanh lá
-                showResult && isSelected -> androidx.compose.ui.graphics.Color(0xFFFFCDD2) // Đỏ nhạt
-                showResult -> androidx.compose.ui.graphics.Color(0xFFFFEBEE) // Đỏ nhạt cho các đáp án còn lại
-                isSelected -> MaterialTheme.colorScheme.primary.copy(alpha = 0.2f)
+                isHovered && !showResult -> MaterialTheme.colorScheme.primary.copy(alpha = 0.15f)
+                showResult && isCorrect -> MaterialTheme.colorScheme.primaryContainer
+                showResult && isSelected -> MaterialTheme.colorScheme.errorContainer
                 else -> MaterialTheme.colorScheme.surface
             }
 
             Card(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(vertical = 8.dp)
-                    .clickable(enabled = !quizState.isAnswerSelected) { onAnswerSelected(index) },
-                shape = androidx.compose.foundation.shape.RectangleShape,
-                elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+                    .padding(vertical = 6.dp)
+                    .then(
+                        if (!quizState.isAnswerSelected) Modifier.clickable { onAnswerSelected(index) }
+                        else Modifier
+                    ),
+                shape = MaterialTheme.shapes.medium,
+                elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
                 colors = CardDefaults.cardColors(containerColor = backgroundColor)
             ) {
                 Text(
                     text = option,
-                    style = MaterialTheme.typography.titleMedium,
-                    textAlign = TextAlign.Center,
+                    style = MaterialTheme.typography.bodyLarge,
                     modifier = Modifier
-                        .padding(vertical = 20.dp)
+                        .padding(16.dp)
                         .fillMaxWidth()
                 )
             }
@@ -79,7 +113,7 @@ fun QuizQuestion(
             Button(
                 onClick = onNextQuestion,
                 modifier = Modifier
-                    .padding(top = 32.dp)
+                    .padding(top = 24.dp)
                     .fillMaxWidth()
             ) {
                 Text(
@@ -92,7 +126,7 @@ fun QuizQuestion(
         Text(
             text = "Số câu đúng: ${quizState.score}",
             style = MaterialTheme.typography.titleMedium,
-            modifier = Modifier.padding(top = 32.dp)
+            modifier = Modifier.padding(top = 24.dp)
         )
     }
 }

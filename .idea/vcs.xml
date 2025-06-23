@@ -2,6 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/PianoVirtual/PianoApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PianoApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PorfolioApp/Basic_PortfolioApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PorfolioApp/PortfolioApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dogapp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/dogapp/DogApp" vcs="Git" />
   </component>
 </project>
